@@ -24,7 +24,7 @@ class chartJsController extends Controller
         $data = collect(DB::SELECT("SELECT jumlah_barang from Barangs"));
         // dd($labels, $statistik);
     
-        return view('chart', compact('label', 'data'));
+        return view('element.chart', compact('label', 'data'));
     }
 
     /**

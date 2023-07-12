@@ -1,6 +1,17 @@
 @extends('layout.template')
 @section('content')
-    <div>
+
+
+
+@endsection
+
+
+
+
+
+
+
+{{-- <div>
         <canvas id="myChart" class="chartjs" width="undefined" height="undefined"></canvas>
 
     </div>
@@ -45,5 +56,4 @@
                 }
             }
         });
-    </script>
-@endsection
+    </script> --}}
