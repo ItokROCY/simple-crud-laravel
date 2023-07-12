@@ -10,8 +10,9 @@
     <a type="button" class="btn btn-outline-danger float-end" href="/" style="font-weight:bold"
         onclick="return confirm('Anda yakin ingin mereset hasil pencarian?')"><i
             class="fa-sharp fa-solid fa-rotate-left" style="color: white;"></i> Reset Tabel</a>
-
 </div>
+
+
 
 <div class="card shadow my-2">
     <div class="card-body">
@@ -47,6 +48,10 @@
                                     onclick="return confirm('Anda yakin ingin menghapus barang ini?')"><i
                                         class="fa-solid fa-trash" style="color: #ffffff;"></i></button>
                             </form>
+
+                            {{-- belum bisa --}}
+                            <button type="submit" class="btn btn-sm btn-dark"><i class="fa-solid fa-print"
+                                    style="color: #ffffff;"></i></button>
                         </td>
                     </tr>
                     <?php $i++; ?>
