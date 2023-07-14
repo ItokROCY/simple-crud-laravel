@@ -10,6 +10,7 @@ list TODO
 - [x] Membuat fungsi search dua tumpuk dengan checkbox
 - [x] Membuat fungsi search dengan dropdown dan tombol search
 - [x] Menambah fitur toggle mode (udah tapi masih belum 100% bisa)
+- [ ] Menambah fitur mengganti tema font
 
 # list package yang dipake
 
