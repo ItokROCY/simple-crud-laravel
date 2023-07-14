@@ -6,10 +6,14 @@
             Kategori</a>
         <a type="button" class="btn btn-outline-secondary" href="/chart">Chart</a>
     </div>
-
     <a type="button" class="btn btn-outline-danger float-end" href="/" style="font-weight:bold"
         onclick="return confirm('Anda yakin ingin mereset hasil pencarian?')"><i
             class="fa-sharp fa-solid fa-rotate-left" style="color: white;"></i> Reset Tabel</a>
+
+    <div class="form-check form-switch float-end mx-2 my-1">
+        <input class="form-check-input p-2" type="checkbox" id="switchTheme" checked onclick="darkMode()">
+        <label class="form-check-label" for="switchTheme">Theme</label>
+    </div>
 </div>
 
 

@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Session;
 use App\Models\chart;
 use App\barangs;
-
+use App\Models\Barang;
 
 class chartJsController extends Controller
 {
@@ -17,14 +17,27 @@ class chartJsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
+    // public function index()
+    // {
 
-        $label = collect(DB::SELECT("SELECT nama_barang from Barangs"));
-        $data = collect(DB::SELECT("SELECT jumlah_barang from Barangs"));
-        // dd($labels, $statistik);
+    //     $label = (DB::SELECT("SELECT nama_barang from Barangs"));
+    //     $values = (DB::SELECT("SELECT jumlah_barang from Barangs"));
+    //     // dd($label, $values);
     
-        return view('element.chart', compact('label', 'data'));
+    //     return view('element.chart', compact('label', 'values'));
+    // }
+
+    public function barChart()
+    {
+        {
+            $barangs = Barang::all();
+            $labels = $barangs->pluck('nama_barang');
+            $data = $barangs->pluck('jumlah_barang');
+    
+            // dd($labels, $data);
+            return view('element.chart', compact('labels', 'data'));
+        }
+        
     }
 
     /**
@@ -91,5 +104,18 @@ class chartJsController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function LineChart()
+    {
+        $data = Barang::selectRaw('DATE_FORMAT(tanggal, "%Y-%m-%d") as date, AVG(output) as avg_output')
+            ->groupBy('date')
+            ->orderBy('date', 'ASC')
+            ->get();
+
+        $label = $data->pluck('nama_barang');
+        $value = $data->pluck('jumlah_barang');
+
+        return view('element.chart', compact('label', 'value'));
     }
 }
