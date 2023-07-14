@@ -38,7 +38,7 @@ Route::get('/barang-kategori', [kontrolKategori::class,'index'])->name('index.ka
 
 
 // chart (undone)
-Route::get('/chart', [chartJsController::class, 'index']);
+Route::get('/chart', [chartJsController::class, 'barChart']);
 
 
 // search route
