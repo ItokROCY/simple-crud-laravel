@@ -18,3 +18,30 @@ list TODO
 - [DOMPDF](https://github.com/barryvdh/laravel-dompdf#dompdf-wrapper-for-laravel) < belum diinstall
 
 ### isi tabel barang bisa import pake file `Barangs.sql`
+### Installation
+
+-   Clone the repo, then enter the project directory with terminal
+
+```sh
+composer install
+```
+
+```sh
+cp .env.example .env
+```
+
+```sh
+php artisan key:generate
+```
+
+-   Create new database, then change the .env
+
+```sh
+php artisan migrate
+```
+
+-   Run
+
+```sh
+php artisan serve
+```
